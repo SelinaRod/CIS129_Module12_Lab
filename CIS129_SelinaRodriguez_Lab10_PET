@@ -1,0 +1,46 @@
+# Author: Selina Rodriguez
+# Module 12: lab 
+#Date
+# Object-Oriented programming: Create a Pet Class
+
+class Pet: #class header
+    def __init__(self, options):     #Constructor expression
+       """Initialize each attribute."""
+       self.name = options['name']
+       self.animal_type = options['type']
+       self.age = options['age']
+
+    def get_name(self): 
+      """returns animal name"""
+      return self.name
+    
+    def get_animal_type(self):
+      """returns animals age"""
+      return self.animal_type
+    
+    def get_age(self):
+      """returns animals age"""
+      return self.age
+    
+    def set_name(self, new_name):
+      self.name = new_name
+    
+    def set_animal_type(self, new_type):
+      self.animal_type = new_type
+
+    def set_age(self, new_age):
+      self.age = new_age
+    
+print("_______________________________")
+print("\tPets Application")
+print("_______________________________")
+
+animal_type = input("What kind of pet do you have? (e.g Dog): ")
+name = input("What is your pets name?: ")
+age = input("How old is your dog? (e.g 3): ")
+
+pet = Pet({'name': name, 'type': animal_type, 'age': age})
+
+print("The pets type is:", animal_type)
+print("The pets name is:", name)
+print("The pets age is:", age,"years old.")

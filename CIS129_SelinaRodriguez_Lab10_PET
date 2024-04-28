@@ -6,21 +6,21 @@
 class Pet: #class header
     def __init__(self, options):     #Constructor expression
        """Initialize each attribute."""
-       self.name = options['name']
-       self.animal_type = options['type']
-       self.age = options['age']
+       self._name = options['name']
+       self._animal_type = options['type']
+       self._age = options['age']
 
     def get_name(self): 
       """returns animal name"""
-      return self.name
+      return self._name
     
     def get_animal_type(self):
       """returns animals age"""
-      return self.animal_type
+      return self._animal_type
     
     def get_age(self):
       """returns animals age"""
-      return self.age
+      return self._age
     
     def set_name(self, new_name):
       self.name = new_name

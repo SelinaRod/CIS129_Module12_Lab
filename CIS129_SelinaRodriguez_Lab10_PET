@@ -1,14 +1,15 @@
-# Author: Selina Rodriguez
+Author: Selina Rodriguez
 # Module 12: lab 
-#Date
-# Object-Oriented programming: Create a Pet Class
+#Date: 04.29.2024
+# Object-Oriented programming: Create a Pet Class to store information. Input animals name, age, and type.
+#program will return info. 
 
 class Pet: #class header
     def __init__(self, options):     #Constructor expression
        """Initialize each attribute."""
-       self._name = options['name']
-       self._animal_type = options['type']
-       self._age = options['age']
+       self._name = options['name']  #name of pet.
+       self._animal_type = options['type']. #what type of pet ( dog or bird, etc)?
+       self._age = options['age'] # how is the pet?
 
     def get_name(self): 
       """returns animal name"""
@@ -22,6 +23,7 @@ class Pet: #class header
       """returns animals age"""
       return self._age
     
+    #functions to find out name, age, and typ.
     def set_name(self, new_name):
       self.name = new_name
     
@@ -35,12 +37,15 @@ print("_______________________________")
 print("\tPets Application")
 print("_______________________________")
 
+# ask user to type in type, name, and age and press enter
 animal_type = input("What kind of pet do you have? (e.g Dog): ")
 name = input("What is your pets name?: ")
 age = input("How old is your dog? (e.g 3): ")
 
+#new pet object from the pet class
 pet = Pet({'name': name, 'type': animal_type, 'age': age})
 
+#displays details about the pet
 print("The pets type is:", animal_type)
 print("The pets name is:", name)
 print("The pets age is:", age,"years old.")
